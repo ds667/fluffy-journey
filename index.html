@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>QR Code Generator</h1>
+            <div class="qrcode-container">
+                <div class="qrcode"></div>
+            </div>
+            <input type="text" id="qr-input" placeholder="Enter text or URL" oninput="generateQr()">
+            <div class="options">
+                <label for="color-picker">QR Code Color:</label>
+                <input type="color" id="color-picker" value="#ff0000" onchange="updateColor()">
+            </div>
+            <div class="actions">
+                <button onclick="clearQr()">Clear</button>
+                <button id="download-btn" onclick="downloadQr()">Download QR Code</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
